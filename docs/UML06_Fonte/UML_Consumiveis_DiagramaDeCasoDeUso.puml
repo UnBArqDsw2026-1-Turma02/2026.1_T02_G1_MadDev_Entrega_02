@@ -1,0 +1,24 @@
+@startuml
+
+title Casos de Uso — Uso de consumíveis\nUS-34, US-35, US-36 | v1
+
+left to right direction
+skinparam actorStyle awesome
+
+actor "Jogador" as jogador
+
+rectangle "Sistema de Consumíveis" {
+  usecase "Usar bomba" as UC1
+  usecase "Usar chave" as UC2
+  usecase "Usar poção" as UC3
+
+  note bottom of UC1 : Pré-cond: bomba no inventário\nRef: US-34
+  note bottom of UC2 : Pré-cond: chave no inventário\nRef: US-35
+  note bottom of UC3 : Pré-cond: poção no inventário\nRef: US-36
+}
+
+jogador --> UC1
+jogador --> UC2
+jogador --> UC3
+
+@enduml
