@@ -3,6 +3,21 @@
 - [Home](/docs)
 - [Projetos](/docs/Projeto/Projeto.md)
 
+
+- **Modelagem**
+  - [2. Desenho de Software (Modelagem)](/Modelagem/2.Modelagem.md)
+    - [2.1. Modelagem UML Estática](/Modelagem/2.1.ModelagemEstatica.md)
+    - [2.2. Modelagem UML Dinâmica](/Modelagem/2.2.ModelagemDinamica.md)
+    - [2.3. Modelagem UML Organizacional ou Casos de Uso](/Modelagem/2.3.ModelagemOrganizacionalCasosDeUso.md)
+    - [2.4. Participações - Modelagem](/Modelagem/2.4.ParticipacoesModelagem.md)
+    - [2.5. Iniciativas Extras - Modelagem](/Modelagem/2.5.IniciativasExtras.md)
+
+- **Reuniões**
+    - [Reuniões](/Base/Reunioes/Reunioes)
+    - [Reunião 1 - 30/03/2026](/Base/Reunioes/Reuniao1)
+    - [Reunião 2 - 31/03/2026](/Base/Reunioes/Reuniao2)
+    - [Reunião 3 - 01/04/2026](/Base/Reunioes/Reuniao3)
+
 - **Base**
   - [**1. Desenho de Software (Base)**]()
     - [**1.1. Design Sprint**](/Base/1.1.DesignSprint)
@@ -25,17 +40,3 @@
         - [1.2.11. Glossário e LAL](/Base/ArtefatosGeneralistas/1.2.3.Glossario_LAL)
     - [**1.3. Modelagem BPMN**](/Base/1.3.ModelagemBPMN)
     - [**1.4. Participações**](/Base/1.4.ParticipacoesBase)
-
-- **Modelagem**
-  - [2. Desenho de Software (Modelagem)](/docs/Modelagem/2.Modelagem.md)
-    - [2.1. Modelagem UML Estática](/docs/Modelagem/2.1.ModelagemEstatica.md)
-    - [2.2. Modelagem UML Dinâmica](/docs/Modelagem/2.2.ModelagemDinamica.md)
-    - [2.3. Modelagem UML Organizacional ou Casos de Uso](/docs/Modelagem/2.3.ModelagemOrganizacionalCasosDeUso.md)
-    - [2.4. Participações - Modelagem](/docs/Modelagem/2.4.ParticipacoesModelagem.md)
-    - [2.5. Iniciativas Extras - Modelagem](/docs/Modelagem/2.5.IniciativasExtras.md)
-
-- **Reuniões**
-    - [Reuniões](/Base/Reunioes/Reunioes)
-    - [Reunião 1 - 30/03/2026](/Base/Reunioes/Reuniao1)
-    - [Reunião 2 - 31/03/2026](/Base/Reunioes/Reuniao2)
-    - [Reunião 3 - 01/04/2026](/Base/Reunioes/Reuniao3)

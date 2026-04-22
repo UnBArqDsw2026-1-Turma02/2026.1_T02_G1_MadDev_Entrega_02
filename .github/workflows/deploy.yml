@@ -39,6 +39,28 @@ jobs:
           fi
           echo "✅ Estrutura validada com sucesso"
 
+      - name: Install PlantUML dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y plantuml graphviz
+
+      - name: Render .puml diagrams to .svg
+        run: |
+          set -euo pipefail
+
+          puml_count=$(find docs -type f -name "*.puml" | wc -l)
+          if [ "$puml_count" -eq 0 ]; then
+            echo "ℹ️ Nenhum arquivo .puml encontrado em docs/."
+            exit 0
+          fi
+
+          find docs -type f -name "*.puml" -print0 | while IFS= read -r -d '' file; do
+            echo "Renderizando $file"
+            plantuml -tsvg "$file"
+          done
+
+          echo "✅ Renderização concluída para $puml_count arquivo(s)."
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

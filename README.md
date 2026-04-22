@@ -64,8 +64,24 @@ Para iniciar o site localmente, utilize o comando:
 ```shell
 docsify serve ./docs
 ```
+
+#### Testando localmente a conversao de .puml para .svg
+
+Instale as dependencias necessarias no Linux (Ubuntu/Debian):
+
+```shell
+sudo apt-get install -y plantuml graphviz
+```
+
+Execute o script de teste local:
+
+```shell
+./scripts/test-puml-local.sh
+```
+
 ## Histórico de Versionamento
 
 | Nome                                        | Alteração                | Versão | Data       |
 | ------------------------------------------- | ------------------------ | ------ | ---------- |
 | [Mateus Vieira](https://github.com/matix0/) | Setup inicial do projeto | v0.1   | 13/04/2026 |
+| [Mateus Vieira](https://github.com/matix0/) | Adicionada ferramenta de conversão de Puml para Svg | v0.2   | 22/04/2026 |
