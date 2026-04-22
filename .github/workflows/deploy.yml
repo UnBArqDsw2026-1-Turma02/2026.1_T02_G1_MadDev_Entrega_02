@@ -1,0 +1,64 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate docs structure
+        run: |
+          if [ ! -d "docs" ]; then
+            echo "❌ Erro: pasta 'docs' não encontrada"
+            exit 1
+          fi
+          if [ ! -f "docs/index.html" ]; then
+            echo "❌ Erro: arquivo 'docs/index.html' não encontrado"
+            exit 1
+          fi
+          echo "✅ Estrutura validada com sucesso"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs'
+          retention-days: 1
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Deployment summary
+        run: |
+          echo "## ✅ Deploy concluído com sucesso!" >> $GITHUB_STEP_SUMMARY
+          echo "📄 URL: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "🔄 Commit: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "👤 Autor: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
