@@ -4,6 +4,23 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DOCS_DIR="$ROOT_DIR/docs"
 
+get_install_hint() {
+  local os_name
+  os_name="$(uname -s)"
+
+  case "$os_name" in
+    Darwin)
+      echo "Install with Homebrew: brew install plantuml graphviz"
+      ;;
+    Linux)
+      echo "Install with your package manager (example Debian/Ubuntu): sudo apt-get install -y plantuml graphviz"
+      ;;
+    *)
+      echo "Install plantuml and graphviz using your OS package manager."
+      ;;
+  esac
+}
+
 print_usage() {
   cat <<'EOF'
 Usage:
@@ -55,10 +72,14 @@ if [[ ! -d "$DOCS_DIR" ]]; then
   exit 1
 fi
 
-require_cmd plantuml "Install with: sudo apt-get install -y plantuml graphviz"
-require_cmd dot "Install with: sudo apt-get install -y graphviz"
+install_hint="$(get_install_hint)"
+require_cmd plantuml "$install_hint"
+require_cmd dot "$install_hint"
 
-mapfile -d '' puml_files < <(find "$DOCS_DIR" -type f -name "*.puml" -print0 | sort -z)
+puml_files=()
+while IFS= read -r -d '' file; do
+  puml_files+=("$file")
+done < <(find "$DOCS_DIR" -type f -name "*.puml" -print0)
 
 if [[ ${#puml_files[@]} -eq 0 ]]; then
   echo "[info] No .puml files found in docs/."
