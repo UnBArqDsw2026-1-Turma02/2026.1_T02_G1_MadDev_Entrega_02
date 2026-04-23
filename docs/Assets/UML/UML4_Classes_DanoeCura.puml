@@ -1,0 +1,27 @@
+@startuml
+title Diagrama de Classes - Vida / Cura / Morte\nUS-18, US-19, US-20 | v1
+
+skinparam packageStyle rectangle
+
+class Health {
+  - currentHp : int
+  - maxHp : int
+
+  + takeDamage(amount : int)
+  + heal(amount : int)
+}
+
+class HealingItem {
+  - healAmount : int
+  + apply(target : Health)
+}
+
+class DamageEvent {
+  - damageAmount : int
+  + apply(target : Health)
+}
+
+HealingItem --> Health : cura
+DamageEvent --> Health : causa dano
+
+@enduml
