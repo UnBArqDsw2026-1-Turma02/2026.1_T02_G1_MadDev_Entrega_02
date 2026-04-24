@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 
-- [Home](/docs)
+- [Home](/docs/README.md)
 - [Projetos](/docs/Projeto/Projeto.md)
 
 
@@ -13,10 +13,10 @@
     - [2.5. Iniciativas Extras - Modelagem](/Modelagem/2.5.IniciativasExtras.md)
 
 - **Reuniões**
-    - [Reuniões](/Base/Reunioes/Reunioes)
-    - [Reunião 1 - 30/03/2026](/Base/Reunioes/Reuniao1)
-    - [Reunião 2 - 31/03/2026](/Base/Reunioes/Reuniao2)
-    - [Reunião 3 - 01/04/2026](/Base/Reunioes/Reuniao3)
+    - [Reuniões](/Reunioes/Reunioes)
+    - [Reunião 1 - 30/03/2026](/Reunioes/Reuniao1)
+    - [Reunião 2 - 31/03/2026](/Reunioes/Reuniao2)
+    - [Reunião 3 - 01/04/2026](/Reunioes/Reuniao3)
 
 - **Base**
   - [**1. Desenho de Software (Base)**]()
