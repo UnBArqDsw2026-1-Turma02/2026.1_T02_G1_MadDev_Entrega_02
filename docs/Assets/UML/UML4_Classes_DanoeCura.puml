@@ -9,6 +9,8 @@ class Health {
 
   + takeDamage(amount : int)
   + heal(amount : int)
+  - checkDeath()
+  + die()
 }
 
 class HealingItem {
@@ -23,5 +25,10 @@ class DamageEvent {
 
 HealingItem --> Health : cura
 DamageEvent --> Health : causa dano
+
+note right of Health
+takeDamage() chama checkDeath()
+checkDeath() chama die() se HP <= 0
+end note
 
 @enduml
