@@ -73,7 +73,7 @@ Execute o script de teste local:
 
 ## Histórico de Versionamento
 
-| Nome                                        | Alteração                | Versão | Data       |
-| ------------------------------------------- | ------------------------ | ------ | ---------- |
-| [Mateus Vieira](https://github.com/matix0/) | Setup inicial do projeto | v0.1   | 13/04/2026 |
+| Nome                                        | Alteração                                           | Versão | Data       |
+| ------------------------------------------- | --------------------------------------------------- | ------ | ---------- |
+| [Mateus Vieira](https://github.com/matix0/) | Setup inicial do projeto                            | v0.1   | 13/04/2026 |
 | [Mateus Vieira](https://github.com/matix0/) | Adicionada ferramenta de conversão de Puml para Svg | v0.2   | 22/04/2026 |
