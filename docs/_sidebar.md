@@ -7,7 +7,13 @@
 - **Modelagem**
   - [2. Desenho de Software (Modelagem)](/Modelagem/2.Modelagem.md)
     - [2.1. Modelagem UML Estática](/Modelagem/2.1.ModelagemEstatica.md)
+      - [2.1.1. Diagramas de Pacotes](/Modelagem/2.1.1.DiagramasPacotes.md)
+      - [2.1.2. Diagramas de Componentes](/Modelagem/2.1.2.DiagramasComponentes.md)
+      - [2.1.3. Diagramas de Classes](/Modelagem/2.1.3.DiagramasClasses.md)
     - [2.2. Modelagem UML Dinâmica](/Modelagem/2.2.ModelagemDinamica.md)
+      - [2.2.1. Diagramas de Sequência](/Modelagem/2.2.1.DiagramasSequencia.md)
+      - [2.2.2. Diagramas de Atividades](/Modelagem/2.2.2.DiagramasAtividades.md)
+      - [2.2.3. Diagramas de Estados](/Modelagem/2.2.3.DiagramasEstados.md)
     - [2.3. Modelagem UML Organizacional ou Casos de Uso](/Modelagem/2.3.ModelagemOrganizacionalCasosDeUso.md)
     - [2.4. Participações - Modelagem](/Modelagem/2.4.ParticipacoesModelagem.md)
     - [2.5. Iniciativas Extras - Modelagem](/Modelagem/2.5.IniciativasExtras.md)
